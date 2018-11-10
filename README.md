@@ -21,3 +21,33 @@ There is a [windows batch](SLSTK3402A/windows_gnu_build_all.cmd) file which comp
 Two projects still have compile errors.
 
 Again: The port is a hack - but the applications run ok.
+
+How I set up this repository
+-----
+~~~~~~
+git clone https://github.com/QuantumLeaps/qpcpp.git
+cd qpcpp
+git checkout tags/v6.3.6 -b SLSTK3402A
+git remote -v
+  origin  https://github.com/QuantumLeaps/qpcpp.git (fetch)
+  origin  https://github.com/QuantumLeaps/qpcpp.git (push)
+git remote set-url origin https://github.com/hmaerki/cpcpp_SLSTK3402A.git
+git push -u origin SLSTK3402A
+~~~~~~
+
+How to run the examples with QSpy
+---------
+~~~~~~
+cmd.exe
+cd C:\qp\qtools\bin
+qspy.exe -h
+qspy.exe -c COM42
+~~~~~~
+
+How to flash using [Simplicity Studio](https://www.silabs.com/products/development-tools/software/simplicity-studio)
+~~~~~~
+  Launcher Perspektive
+  Compatible Tools
+  Flash Programmer
+~~~~~~
+Start the Flash-Programmer, check 'bin'-file and flash <qpcpp>\examples\arm-cm\dpp_efm32-slstk3401a\qv\gnu\spy\dpp-qv.bin
