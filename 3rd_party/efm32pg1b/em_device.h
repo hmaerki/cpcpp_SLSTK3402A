@@ -9,13 +9,13 @@
  * @verbatim
  * Example: Add "-DEFM32G890F128" to your build options, to define part
  *          Add "#include "em_device.h" to your source files
- *
+
  *
  * @endverbatim
- * @version 4.3.0
+ * @version 5.6.0
  ******************************************************************************
- * @section License
- * <b>Copyright 2016 Silicon Laboratories, Inc. http://www.silabs.com</b>
+ * # License
+ * <b>Copyright 2018 Silicon Laboratories, Inc. www.silabs.com</b>
  ******************************************************************************
  *
  * Permission is granted to anyone to use this software for any purpose,
@@ -44,23 +44,17 @@
 #ifndef EM_DEVICE_H
 #define EM_DEVICE_H
 
-#if defined(EFM32PG1B100F128GM32)
-#include "efm32pg1b100f128gm32.h"
+#if defined(EFM32PG12B500F1024GL125)
+#include "efm32pg12b500f1024gl125.h"
 
-#elif defined(EFM32PG1B100F256GM32)
-#include "efm32pg1b100f256gm32.h"
+#elif defined(EFM32PG12B500F1024GM48)
+#include "efm32pg12b500f1024gm48.h"
 
-#elif defined(EFM32PG1B200F128GM32)
-#include "efm32pg1b200f128gm32.h"
+#elif defined(EFM32PG12B500F1024IL125)
+#include "efm32pg12b500f1024il125.h"
 
-#elif defined(EFM32PG1B200F128GM48)
-#include "efm32pg1b200f128gm48.h"
-
-#elif defined(EFM32PG1B200F256GM32)
-#include "efm32pg1b200f256gm32.h"
-
-#elif defined(EFM32PG1B200F256GM48)
-#include "efm32pg1b200f256gm48.h"
+#elif defined(EFM32PG12B500F1024IM48)
+#include "efm32pg12b500f1024im48.h"
 
 #else
 #error "em_device.h: PART NUMBER undefined"
